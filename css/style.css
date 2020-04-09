@@ -7,6 +7,12 @@
 
 }
 
+*, *:before, *:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
 :root {
     --yellow: #ffbc2f;
     --red: #d82727;
@@ -35,6 +41,11 @@ ul > li {
     list-style: none;
 }
 
+.default-img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
 .wrapper {
     overflow: hidden;
     min-width: 1440px;
@@ -60,6 +71,17 @@ ul > li {
     justify-content: space-between;
     align-items: center;
     padding-top: 27px;
+}
+
+.logo {
+    width: 154px;
+    height: 123px;
+    display: inline-block;
+}
+
+.logo__pic {
+    max-width: 100%;
+    max-width: 100%;
 }
 
 .mail {
@@ -180,6 +202,384 @@ ul > li {
     color: var(--red);
 }
 
+.fade-logo {
+    text-decoration: none;
+}
+
+.page-header {
+    background: url(../images/decor/header-guys.png),
+    url(../images/bg/hero.jpg);
+    background-repeat: no-repeat, no-repeat;
+    background-position: center top -21px, center center;
+    background-size: 452px 290px, cover;
+    min-height: 182px;
+    margin-bottom: 88px;
+    cursor: pointer;
+}
+
+.page-header__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 27px;
+    position: relative;
+}
+
+.active-logo {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.active-logo .active-logo__text {
+    margin-top: 0;
+    margin-bottom: 0;
+    position: absolute;
+    left: 26%;
+    top: 31%;
+}
+
+.lined-text_size {
+    font-size: 31px;
+}
+
+.products-main {
+    margin-bottom: 95px;
+}
+
+.products-main__container {
+    width: 1105px;
+}
+
+.row {
+    display: flex;
+    background: var(--yellow);
+    padding: 10px;
+    align-items: center;
+}
+
+.col-left {
+    flex: 0 0 55%;
+    max-width: 55%;
+}
+
+.col-right {
+    flex: 0 0 45%;
+    max-width: 45%;
+}
+
+.t-shirt {
+    /* width: 600px;
+    height: 543px; */
+    flex-shrink: 0;
+}
+
+.card {
+    background: #fcf5e6;
+    padding: 15px 0px 15px 20px;
+}
+
+.card__title {
+    margin-bottom: 30px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 30px;
+}
+
+.card__model {
+    font-size: 16px;
+    color: #fcba2e;
+    font-family: 'Roboto', Arial, sans-serif;
+    font-weight: bold;
+}
+
+.card__title-name {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 47px;
+    font-family: var(--titlesfont);
+    text-transform: uppercase;
+}
+
+.card__properties {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 34px;
+    margin-bottom: 29px;
+}
+
+.properties__item {
+    margin-bottom: 20px;
+}
+
+.properties__text {
+    color: #1b1b1b;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.card__price-amount {
+    font-size: 30px;
+    font-family: var(--titlesfont);
+    font-weight: bold;
+    background: #ffc92f;
+    width: 95px;
+    padding: 5px;
+}
+
+.card__size {
+    margin-bottom: 22px;
+}
+
+.size__list {
+    display: flex;
+    align-items: center;
+}
+
+.size__item {
+    margin-right: 7px;
+}
+
+.size__item:last-child {
+    margin-right: 0;
+}
+
+.size__link {
+    text-decoration: none;
+    font-size: 15px;
+    color: #212121;
+    font-weight: bold;
+    border: 3px solid #ccc;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .3s;
+}
+
+.size__item_active .size__link {
+    background-color: var(--yellow);
+    border-color: var(--yellow);
+}
+
+.card__color {
+    margin-bottom: 28px;
+}
+
+.form-checkbox__input {
+    display: none;
+}
+
+.form-checkbox {
+    margin-right: 13px;
+    cursor: pointer;
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.form-checkbox__circular {
+    display: block;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 4px solid #fcf5e6; 
+    background-color: var(--black);
+    position: relative;
+    color: #000;
+}
+
+.form-checkbox__circular-white {
+    background: #fefefe;  
+}
+
+.form-checkbox__circular-blue {
+    background: blue;  
+}
+
+.form-checkbox__circular-red {
+    background: red;  
+}
+
+.form-checkbox__circular-green {
+    background: green;  
+}
+
+.form-checkbox__circular-active {
+    box-shadow: 0 0 0 2px #fcba2e;
+}
+
+.products-container {
+    width: 1105px;
+}
+
+.about-product {
+    transition: all .6s;
+}
+
+.about-product__item {
+    margin-bottom: 70px;
+    border: 8px solid var(--yellow);
+}
+
+.about-product__item:last-child {
+    margin-bottom: 0;
+}
+
+.descr {
+    display: flex;
+    padding: 30px;
+    position: relative;
+}
+
+.descr__left {
+    flex: 0 0 30%;
+    max-width: 30%;
+    /* border-right: 1px solid #aaa; */
+}
+
+.descr:after {
+    content: "";
+    position: absolute;
+        left: 30%;
+        top: 0;
+    width: 2px;
+    height: 100%;
+    background: #ccc;
+    opacity: .6;
+}
+
+.descr__right {
+    flex: 0 0 70%;
+    max-width: 70%;
+    padding-left: 47px;
+}
+
+.rule__page {
+    display: flex;
+    align-items: center;
+}
+
+.rule__page-icon {
+    margin-right: 24px;
+}
+
+.rule__page-text {
+    font-size: 13px;
+    color: #1b1b1b;
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+/*Table size*/
+
+.table-size {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.table-size__left {
+    width: 30%;
+    padding: 20px;
+}
+
+.table-size__right {
+    width: 70%;
+}
+
+.t-shirt__img {
+    margin-bottom: 50px;
+    width: 227px;
+    height: 203px;
+}
+
+.t-shirt__item {
+    margin-bottom: 10px;
+}
+
+.t-shirt__text {
+    font-size: 12px;
+    color: #1b1b1b;
+}
+
+.table__heading th, td {
+    text-align: left;
+    background: #f6efe0;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    color: #1b1b1b;
+    width: 100%;
+    font-family: 'Robot', Arial, sans-serif;
+}
+
+.table__descr td  {
+    background: none;
+    font-size: 12px;
+}
+
+/*delivery*/
+
+.delivery {
+    display: flex;
+    align-items: center;
+    padding: 30px;
+    position: relative;
+}
+
+.delivery__logo {
+    width: 168px;
+    height: 153px;
+    margin-right: 140px;
+    flex-shrink: 0;
+}
+
+.delivery__logo::after {
+    content: "";
+    width: 2px;
+    height: 100%;
+    background: #aaa;
+    position: absolute; 
+        top: 0;
+        bottom: 0;
+        left: 25%;
+    opacity: .6;
+}
+
+.delivery__text p {
+    font-size: 14px;
+    font-family: 'Roboto', Arial, sans-serif;
+    color: #1b1b1b;
+}
+
+/*about-brandy*/
+
+.about-brandy {
+    display: flex;
+    align-items: center;
+    padding: 30px 30px 50px 30px;
+    position: relative;
+}
+
+.about-brandy__logo {
+    width: 224px;
+    height: 56px;
+    flex-shrink: 0;
+    margin-right: 100px;
+}
+
+.about-brandy__logo::after {
+    content: "";
+    width: 2px;
+    height: 100%;
+    background: #aaa;
+    position: absolute; 
+        top: 0;
+        bottom: 0;
+        left: 28%;
+    opacity: .6;
+}
+
 .fade-slider {
     width: 100%;
     height: 100%;
@@ -252,6 +652,10 @@ ul > li {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+}
+
+.lined-text_size {
+    font-size: 31px;
 }
 
 .lined-text__word {
