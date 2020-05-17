@@ -81,7 +81,7 @@ ul > li {
 
 .logo__pic {
     max-width: 100%;
-    max-width: 100%;
+    max-height: 100%;
 }
 
 .mail {
@@ -267,12 +267,6 @@ ul > li {
     max-width: 45%;
 }
 
-.t-shirt {
-    /* width: 600px;
-    height: 543px; */
-    flex-shrink: 0;
-}
-
 .card {
     background: #fcf5e6;
     padding: 15px 0px 15px 20px;
@@ -287,7 +281,6 @@ ul > li {
 .card__model {
     font-size: 16px;
     color: #fcba2e;
-    font-family: 'Roboto', Arial, sans-serif;
     font-weight: bold;
 }
 
@@ -303,6 +296,10 @@ ul > li {
     border-bottom: 1px solid #ccc;
     padding-bottom: 34px;
     margin-bottom: 29px;
+}
+
+.properties__list {
+    margin-bottom: -20px;
 }
 
 .properties__item {
@@ -429,14 +426,10 @@ ul > li {
 
 .descr {
     display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
     padding: 30px;
     position: relative;
-}
-
-.descr__left {
-    flex: 0 0 30%;
-    max-width: 30%;
-    /* border-right: 1px solid #aaa; */
 }
 
 .descr:after {
@@ -448,12 +441,6 @@ ul > li {
     height: 100%;
     background: #ccc;
     opacity: .6;
-}
-
-.descr__right {
-    flex: 0 0 70%;
-    max-width: 70%;
-    padding-left: 47px;
 }
 
 .rule__page {
@@ -468,7 +455,12 @@ ul > li {
 .rule__page-text {
     font-size: 13px;
     color: #1b1b1b;
-    font-family: 'Roboto', Arial, sans-serif;
+}
+
+.descr__text {
+    font-size: 13px;
+    color: #1b1b1b;
+    flex-basis: 64%;
 }
 
 /*Table size*/
@@ -476,26 +468,26 @@ ul > li {
 .table-size {
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
 }
 
 .table-size__left {
-    width: 30%;
+    margin-right: 20px;
     padding: 20px;
-}
-
-.table-size__right {
-    width: 70%;
 }
 
 .t-shirt__img {
     margin-bottom: 50px;
     width: 227px;
     height: 203px;
+    flex-shrink: 0;
 }
 
 .t-shirt__item {
     margin-bottom: 10px;
+}
+
+.t-shirt__descr {
+    margin: 0;
 }
 
 .t-shirt__text {
@@ -510,7 +502,6 @@ ul > li {
     font-size: 14px;
     color: #1b1b1b;
     width: 100%;
-    font-family: 'Robot', Arial, sans-serif;
 }
 
 .table__descr td  {
@@ -523,6 +514,7 @@ ul > li {
 .delivery {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     padding: 30px;
     position: relative;
 }
@@ -530,7 +522,6 @@ ul > li {
 .delivery__logo {
     width: 168px;
     height: 153px;
-    margin-right: 140px;
     flex-shrink: 0;
 }
 
@@ -546,10 +537,14 @@ ul > li {
     opacity: .6;
 }
 
+.delivery__text {
+    flex-basis: 64%;
+}
+
 .delivery__text p {
     font-size: 14px;
-    font-family: 'Roboto', Arial, sans-serif;
     color: #1b1b1b;
+    flex-basis: 64%;
 }
 
 /*about-brandy*/
@@ -557,6 +552,7 @@ ul > li {
 .about-brandy {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     padding: 30px 30px 50px 30px;
     position: relative;
 }
@@ -565,7 +561,6 @@ ul > li {
     width: 224px;
     height: 56px;
     flex-shrink: 0;
-    margin-right: 100px;
 }
 
 .about-brandy__logo::after {
@@ -578,6 +573,10 @@ ul > li {
         bottom: 0;
         left: 28%;
     opacity: .6;
+}
+
+.about-brandy__text {
+    flex-basis: 64%;
 }
 
 .fade-slider {
